@@ -1,0 +1,56 @@
+{
+	"name": "PL_copy_ssms_to_snowflake",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_data_from_ssms_to_snowflake",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SnowflakeV2Sink",
+						"importSettings": {
+							"type": "SnowflakeImportCopyCommand"
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "LS_StorageAccount_SAS_URI",
+							"type": "LinkedServiceReference"
+						},
+						"path": "container1"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "sqlserverfromssms",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SnowflakeTable",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-03-13T18:23:30Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,21 @@
+{
+	"name": "LS_SqlServer_ssms",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "LAPTOP-A4BOFRQJ\\SQLEXPRESS",
+			"database": "miniproject",
+			"encrypt": "optional",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmZjZlOTliNi00NmE2LTQyZWUtOGU0Ny1lNGY1MjVmZmRhNjYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeformp",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

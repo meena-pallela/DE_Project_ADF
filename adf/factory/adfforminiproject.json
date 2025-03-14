@@ -1,0 +1,9 @@
+{
+	"name": "adfforminiproject",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b9134010-e881-4190-8832-31838ad1f088",
+		"tenantId": "2800c0a0-70e9-49be-8733-faeaa6aced99"
+	}
+}

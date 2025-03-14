@@ -1,0 +1,17 @@
+{
+	"name": "sqlserverfromssms",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SqlServer_ssms",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "transactions"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "SnowflakeTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Snowflake_V2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "STAGING",
+			"table": "TRANSACTIONS"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
